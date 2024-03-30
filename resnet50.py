@@ -30,14 +30,14 @@ train_subset = torch.utils.data.Subset(train_dataset, subset_indices)
 train_loader = torch.utils.data.DataLoader(train_subset, batch_size=32, shuffle=True)
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=32, shuffle=False)
 
-# Load pre-trained ResNet-50 model
-model = models.resnet50(pretrained=True)
+# Load pre-trained ResNet-18 model
+model = models.resnet18(pretrained=True)
 for param in model.parameters():
     param.requires_grad = False
 
 # Replace the last fully connected layer for classification
 num_ftrs = model.fc.in_features
-model.fc = nn.Linear(num_ftrs, 10)
+model.fc = nn.Linear(num_ftrs, 20)
 
 
 model = model.to(device)
