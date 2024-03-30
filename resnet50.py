@@ -78,7 +78,7 @@ for optimizer_name, optimizer in optimizers.items():
         train_accuracy = correct / total
         train_losses.append(train_loss)
         train_accuracies.append(train_accuracy)
-        print(f"Epoch {epoch+1}/{num_epochs}, Loss: {train_loss:.4f}, Accuracy: {train_accuracy:.4f}")
+        print(f"Epoch {epoch+1}/{num_epochs}, Loss: {train_loss:.4f}, TrainAccuracy: {train_accuracy:.4f}")
 
     # Plot training curves
     plt.figure(figsize=(10, 5))
