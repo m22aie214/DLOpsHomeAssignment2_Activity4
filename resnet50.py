@@ -53,7 +53,7 @@ optimizers = {
 }
 
 # Training loop
-num_epochs = 4
+num_epochs = 3
 for optimizer_name, optimizer in optimizers.items():
     print(f"Training with {optimizer_name} optimizer...")
     train_losses = []
